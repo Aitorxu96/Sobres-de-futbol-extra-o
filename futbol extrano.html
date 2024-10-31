@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sobre Futbol Extraño</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            background-color: #f0f0f0;
+        }
+        .container {
+            text-align: center;
+            padding: 20px;
+            background-color: #fff;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+        #dice {
+            font-size: 100px;
+            margin: 20px;
+            color: #333;
+        }
+        button {
+            padding: 10px 20px;
+            font-size: 18px;
+            cursor: pointer;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            border-radius: 5px;
+        }
+        button:hover {
+            background-color: #45a049;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <h2>Sobre Futbol Extraño Temporada 1</h2>
+        <div id="dice">📧</div>
+        <button onclick="rollDice()">¡QUE TE TOCARÁ!</button>
+    </div>
+
+    <script>
+        function rollDice() {
+            // Lista de palabras a seleccionar
+            const words = ["Princesa", "Puccy", "Goblan", "Zorro", "Yippi", "Cuac", "Eduard", "Laika", "Ussop", "Smoker", "Leo", "Wyper", "Bartolomeo", "Wadatsumi", "Bulbasur", "Machop", "Pikachu", "Velociraptor", "Diplodocus", "Dilophosaurus", "Tentáculos", "Arbustos", "Snorlax", "Cono", "Mono", "Maniqui", "Nube densa", "Bomba", "Curandera", "Planta carnívora", "Pase largo", "Hooligan real", "Fuego en la grada", "Maldición", "Boicot al portero", "Laser al ojo", "Batalla de hooligans", "Botellazo", "Control mental", "Ser de luz", "Ni de coña", "Retener al banquillo", "Dardos venenosos", "Ultima oportunidad", "Defensa férrea", "Regate extremo", "Ataque rápido", "Patada voladora", "Cambio de posición", "Parines propulsión", "Pase preciso", "Golpe de karate", "Tirachinas", "Voleón", "Pisada gigante", "Onda expansiva", "Botella de agua", "¡Arriba!", "Corte precios", "Lanzamiento", "Espectacular", "Pichichi", "Vamos nakamas", "Maniobra", "Antes de caer", "Bazooka", "Pase con amor", "Tiro potente", "Golpiza", "Esfumarse", "Mordisco letal", "Invencible" ];
+
+            // Seleccionar una palabra aleatoria de la lista
+            const randomIndex = Math.floor(Math.random() * words.length);
+            const randomWord = words[randomIndex];
+            
+            // Mostrar la palabra seleccionada en el div "dice"
+            document.getElementById('dice').textContent = randomWord;
+    
+        }
+    </script>
+
+</body>
+</html>
+
+
